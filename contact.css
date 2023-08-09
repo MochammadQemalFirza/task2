@@ -3,6 +3,9 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+body{
+  background-image: url(https://i.pinimg.com/564x/f1/30/02/f1300267a572d0f9269b3f443fe33c62.jpg);
+}
 nav {
     background-color: #ebeaea;
     display: flex;
@@ -45,6 +48,15 @@ nav {
     border-radius: 5px;
   }
   
+  section {
+    width: 600px; 
+    height: 800px;
+    background-color: #ffffff;
+    margin:90px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #666666;
+  }
+
 form {
     width: 500px;
     margin: 40px auto;
@@ -60,7 +72,7 @@ label {
 }
 
 input, select, textarea {
-    background-color: #ffffff;
+    background-color: rgb(230, 230, 230);
     width: 100%;
     padding: 12px;
     margin-top: 5px;
