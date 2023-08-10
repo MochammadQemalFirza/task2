@@ -5,65 +5,63 @@
 </head>
 
 <body>
-
-  <body>
-    <nav>
-      <div class="nav-left">
-        <ul>
-          <li>
-            <img src="assets/logo.png" alt="logo" />
-          </li>
-          <li>
-            <a href="index.html" class="active" style="text-decoration:none;">Home</a>
-          </li>
-          <li>
-            <a href="#" style="text-decoration:none;color: black;">Blog</a>
-          </li>
-        </ul>
+  <nav>
+    <div class="nav-left">
+      <ul>
+        <li>
+          <img src="assets/logo.png" alt="logo" />
+        </li>
+        <li>
+          <a href="index.html" class="active" style="text-decoration:none;">Home</a>
+        </li>
+        <li>
+          <a href="project.html" style="text-decoration:none;color: black;">My Project</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <section>
+    <form>
+      <center>
+        <h1 style="font-size: 40px;">GET IN TOUCH</h1>
+      </center>
+      <div>
+        <label for="input-name">NAME</label>
+        <input type="text" id="input-name">
       </div>
-      <div class="nav-right">
-        <a href="contact.html">Contact</a>
+      <div>
+        <label for="input-email">EMAIL</label>
+        <input type="email" required id="input-email">
       </div>
-    </nav>
-    <section>
-      <form>
-        <center>
-          <h1 style="font-size: 40px;">GET IN TOUCH</h1>
-        </center>
-        <div>
-          <label for="input-name">NAME</label>
-          <input type="text" id="input-name">
-        </div>
-        <div>
-          <label for="input-email">EMAIL</label>
-          <input type="email" required id="input-email">
-        </div>
-        <div>
-          <label for="input-phone">YOUR PHONE</label>
-          <input type="number" name="" id="input-phone">
-        </div>
-        <div>
-          <label for="input-pilih">SUBJECT</label>
-          <select name="Pilih" id="input-pilih" style="width: 500px;">
-            <option value="" hidden>Select</option>
-            <option value="ngoding">1. ngoding</option>
-            <option value="desain">2. desain</option>
-            <option value="motoran">3. motoran</option>
-            <option value="mukbang">4. mukbang</option>
-            <option value="turu">5. turu</option>
-          </select>
-        </div>
-        <div>
-          <label for="input-message">MESSAGE</label>
-          <textarea name="" id="input-message" cols="30" rows="4" maxlength="50"></textarea>
-        </div>
-        <div style="text-align: end;">
-          <button type="button" onclick="submitData()">Submit</button>
-        </div>
-      </form>
-    </section>
+      <div>
+        <label for="input-phone">YOUR PHONE</label>
+        <input type="number" name="" id="input-phone">
+      </div>
+      <div>
+        <label for="input-pilih">SUBJECT</label>
+        <select name="Pilih" id="input-pilih" style="width: 500px;">
+          <option value="" hidden>Select</option>
+          <option value="ngoding">1. ngoding</option>
+          <option value="desain">2. desain</option>
+          <option value="motoran">3. motoran</option>
+          <option value="mukbang">4. mukbang</option>
+          <option value="turu">5. turu</option>
+        </select>
+      </div>
+      <div>
+        <label for="input-message">MESSAGE</label>
+        <textarea name="" id="input-message" cols="30" rows="4" maxlength="50"></textarea>
+      </div>
+      <div style="text-align: end;">
+        <button type="button" onclick="submitData()">Submit</button>
+      </div>
+    </form>
+  </section>
 
-    <script src="contact.js"></script>
-  </body>
+  <script src="contact.js"></script>
+</body>
 
 </html>
