@@ -184,7 +184,7 @@ select {
   height: 950px;
   text-align: justify;
   background-color: white;
-  margin-left: 50px;
+  margin: 50px 40px;
   border-radius: 15px;
   justify-content: center;
   box-shadow: 0 0 10px black;
