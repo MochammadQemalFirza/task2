@@ -55,16 +55,16 @@
                         <label>Technologies</label>
                         <table style="width: 100%;margin-left: -20px;">
                             <tr>
-                                <td><input type="checkbox" name="" id=""></td>
-                                <td><label for="">Node Js</td>
-                                <td><input type="checkbox" name="" id=""></td>
-                                <td><label for="">Next Js</td>
+                                <td><input type="checkbox" class="multi-input" id="cek1" value="Node Js"></td>
+                                <td><label for="cek1">Node Js</td>
+                                <td><input type="checkbox" class="multi-input" id="cek2" value="Next Js"></td>
+                                <td><label for="cek2">Next Js</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="" id=""></td>
-                                <td><label for="">Typescript</td>
-                                <td><input type="checkbox" name="" id=""></td>
-                                <td><label for="">React Js</td>
+                                <td><input type="checkbox" class="multi-input" id="cek3" value="Typescript"></td>
+                                <td><label for="cek3">Typescript</td>
+                                <td><input type="checkbox" class="multi-input" id="cek4" value="React Js"></td>
+                                <td><label for="cek4">React Js</td>
                             </tr>
                         </table>
                     </div>
@@ -72,15 +72,14 @@
                         <label>Upload Image</label>
                         <div class="input-blog-image-group">
                             <label for="input-blog-image">
-                                <p>choose</p>
-                                <input type="file" id="input-file" hidden />
+                                <input type="file" id="input-file" />
                                 <img src="assets/file.png" alt="file" />
                             </label>
 
                         </div>
                     </div>
                     <div class="button-group">
-                        <button onclick="submitProject()" type="button">Submit</button>
+                        <button onclick="submitProject(event)" type="button">Submit</button>
                     </div>
                 </form>
             </div>
