@@ -60,7 +60,7 @@ section {
   width: 600px;
   height: 800px;
   background-color: #ffffff;
-  margin: 90px auto;
+  margin: 5px auto;
   border-radius: 15px;
   box-shadow: 0 0 30px #666666;
 }
@@ -82,13 +82,14 @@ label {
 input,
 select,
 textarea {
-  background-color: rgb(230, 230, 230);
   width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border-radius: 10px;
-  border: 0px solid rgba(0, 0, 0, 0.733);
-  box-shadow: 0 2px 5px rgb(116, 116, 116);
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px;
+  margin: auto;
+  background: #f4f3f3;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
   resize: none;
 }
 
