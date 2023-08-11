@@ -16,8 +16,6 @@ function submitProject() {
     return alert("End Date can't be empty!");
   } else if (description == "") {
     return alert("Description can't be empty!");
-  } else if (image == "") {
-    return alert("Image can't be empty!");
   }
 
   let project = {

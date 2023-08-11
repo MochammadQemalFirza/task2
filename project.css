@@ -164,32 +164,23 @@ select {
   color: rgb(255, 255, 255);
 }
 
-.blog hr {
-  border: 1px solid #dbdbdb;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .blog-list {
-  padding: 50px 200px;
   background-color: rgb(206, 206, 206);
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  padding: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  padding: 20px 80px;
 }
 
 .blog-list-item {
   width: 300px;
-  height: 950px;
   text-align: justify;
   background-color: white;
-  margin: 50px 40px;
   border-radius: 15px;
   justify-content: center;
   box-shadow: 0 0 10px black;
   padding: 20px;
+  margin: auto;
 }
 
 .blog-list-item .blog-content {
