@@ -56,26 +56,32 @@ function submitProject(event) {
   let project = {
     projectTitle,
     durasi,
+    postAt: new Date(),
     description,
     image,
   };
 
   data.push(project);
   console.log(data);
-  renderBlog();
+  renderProject();
 }
 
-function renderBlog() {
+function renderProject() {
   document.getElementById("content").innerHTML = "";
   for (let i = 0; i < data.length; i++) {
     document.getElementById("content").innerHTML += `
     <div class="blog-list-item" style="margin 50px auto">
      <div class="blog-image">
-       <img src="${data[i].image}" alt="gagal" style="width: 100%; border-radius: 10px 10px 0 0;" />
+       <img src="${
+         data[i].image
+       }" alt="gagal" style="width: 100%; border-radius: 10px 10px 0 0;" />
      </div>
      <div class="title-content">
-       <a href="project_detail.html"><p style="font-size: 25px;text-align: left ; margin: 0px;">${data[i].projectTitle}</p></a>
+       <a href="project_detail.html"><p style="font-size: 25px;text-align: left ; margin: 0px;">${
+         data[i].projectTitle
+       }</p></a>
        <p style="font-size: 20px;">Durasi: ${data[i].durasi}</p>
+       <p>sejak : ${getDistance(data[i].postAt)}</p>
      </div>
      <div class="blog-content">
          <p style="font-size:12px">
@@ -94,3 +100,35 @@ function renderBlog() {
    </div>`;
   }
 }
+
+function getDistance(time) {
+  let timeNow = new Date();
+  let timePost = time;
+
+  let distance = timeNow - timePost;
+
+  let milisecond = 1000;
+  let secondInHours = 3600;
+  let hoursInDays = 24;
+
+  let distanceDay = Math.floor(
+    distance / (milisecond * secondInHours * hoursInDays)
+  );
+  let distanceHours = Math.floor(distance / (milisecond * 60 * 60));
+  let distanceMinutes = Math.floor(distance / (milisecond * 60));
+  let distanceSecond = Math.floor(distance / milisecond);
+
+  if (distanceDay > 0) {
+    return `${distanceDay} days ago`;
+  } else if (distanceHours > 0) {
+    return `${distanceHours} hours ago`;
+  } else if (distanceMinutes > 0) {
+    return `${distanceMinutes} minutes ago`;
+  } else {
+    return `${distanceSecond} seconds ago`;
+  }
+}
+
+setInterval(function () {
+  renderProject();
+}, 5000);
