@@ -51,12 +51,30 @@ function submitProject(event) {
     durasi = tahun + " Tahun";
   }
 
+  const nodeJsIcon = '<i class="fa-brands fa-node"></i>';
+  const reactIcon = '<i class="fa-brands fa-react"></i>';
+  const golangIcon = '<i class="fa-brands fa-golang"></i>';
+  const vueJsIcon = '<i class="fa-brands fa-vuejs"></i>';
+
+  let nodeJs = document.getElementById("cek1").checked ? nodeJsIcon : "";
+  let golang = document.getElementById("cek2").checked ? golangIcon : "";
+  let reactJs = document.getElementById("cek3").checked ? reactIcon : "";
+  let vueJs = document.getElementById("cek4").checked ? vueJsIcon : "";
+
+  let multiInput = document.querySelectorAll(".multi-input:checked");
+  if (multiInput.length === 0) {
+    return alert("Please Select At least One Technologies");
+  }
   image = URL.createObjectURL(image[0]);
 
   let project = {
     projectTitle,
     durasi,
     postAt: new Date(),
+    nodeJs,
+    golang,
+    reactJs,
+    vueJs,
     description,
     image,
   };
@@ -70,8 +88,8 @@ function renderProject() {
   document.getElementById("content").innerHTML = "";
   for (let i = 0; i < data.length; i++) {
     document.getElementById("content").innerHTML += `
-    <div class="blog-list-item" style="margin 50px auto">
-     <div class="blog-image">
+    <div class="project-list-item" style="margin 50px auto"> 
+     <div class="project-image">
        <img src="${
          data[i].image
        }" alt="gagal" style="width: 100%; border-radius: 10px 10px 0 0;" />
@@ -83,15 +101,16 @@ function renderProject() {
        <p style="font-size: 20px;">Durasi: ${data[i].durasi}</p>
        <p>sejak : ${getDistance(data[i].postAt)}</p>
      </div>
-     <div class="blog-content">
+     <div>
+                          ${data[i].nodeJs}
+                          ${data[i].golang}
+                          ${data[i].reactJs}
+                          ${data[i].vueJs}
+                        </div>
+     <div class="project-content">
          <p style="font-size:12px">
             ${data[i].description}
          </p>
-     </div>
-     <div class="logo">
-       <i class="fa-brands fa-google-play fa-lg"></i>
-       <i class="fa-brands fa-android fa-lg"></i>
-       <i class="fa-brands fa-java fa-lg"></i>
      </div>
      <div class="btn-group">
        <button class="btn-edit">Edit Post</button>
@@ -118,14 +137,23 @@ function getDistance(time) {
   let distanceMinutes = Math.floor(distance / (milisecond * 60));
   let distanceSecond = Math.floor(distance / milisecond);
 
-  if (distanceDay > 0) {
-    return `${distanceDay} days ago`;
-  } else if (distanceHours > 0) {
-    return `${distanceHours} hours ago`;
-  } else if (distanceMinutes > 0) {
-    return `${distanceMinutes} minutes ago`;
-  } else {
+  if (distanceSecond <= 60) {
     return `${distanceSecond} seconds ago`;
+  } else if (distanceSecond > 60) {
+    return `${distanceMinutes} minutes ` + `${distanceSecond} seconds ago`;
+  } else if (distanceMinutes > 60) {
+    return (
+      `${distanceHours} hours ` +
+      `${distanceMinutes} minutes ` +
+      `${distanceSecond} seconds ago`
+    );
+  } else if (distanceHours > 24) {
+    return (
+      `${distanceDay} days ` +
+      `${distanceHours} hours ` +
+      `${distanceMinutes} minutes ` +
+      `${distanceSecond} seconds ago`
+    );
   }
 }
 

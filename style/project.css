@@ -57,7 +57,7 @@ nav ul li .active {
   color: rgb(255, 255, 255);
 }
 
-.blog {
+.project {
   width: 600px;
 
   background-color: #ffffff;
@@ -66,22 +66,22 @@ nav ul li .active {
   margin: 20px auto;
 }
 
-.blog-form {
+.project-form {
   padding: 50px 0;
   display: flex;
   justify-content: center;
 }
 
-.blog-form .form-container {
+.project-form .form-container {
   width: 500px;
 }
 
-.blog-form .form-container h1 {
+.project-form .form-container h1 {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.blog-form form label {
+.project-form form label {
   font-size: 20px;
   font-weight: 400;
 }
@@ -92,7 +92,7 @@ nav ul li .active {
 .date .date-end {
   padding-left: 10px;
 }
-.blog-form form input,
+.project-form form input,
 select {
   width: 100%;
   font-size: 20px;
@@ -105,7 +105,7 @@ select {
   border-radius: 8px;
 }
 
-.blog-form form textarea {
+.project-form form textarea {
   width: 100%;
   height: 150px;
   resize: none;
@@ -117,7 +117,7 @@ select {
   border-radius: 8px;
 }
 
-.blog-form form .input-blog-image-group {
+.project-form form .input-project-image-group {
   width: 100%;
   font-size: 20px;
   font-weight: 400;
@@ -130,11 +130,11 @@ select {
   cursor: pointer;
 }
 
-.blog-form form .input-blog-image-group label p {
+.project-form form .input-project-image-group label p {
   font-size: 15px;
 }
 
-.blog-form form .input-blog-image-group label {
+.project-form form .input-project-image-group label {
   width: 95%;
   padding: 10px;
   cursor: pointer;
@@ -144,11 +144,11 @@ select {
   font-weight: 500;
 }
 
-.blog-form form .button-group {
+.project-form form .button-group {
   text-align: right;
 }
 
-.blog-form form button {
+.project-form form button {
   padding: 8px 20px;
   font-size: 17px;
   background: #ec4d37;
@@ -158,12 +158,12 @@ select {
   cursor: pointer;
 }
 
-.blog-form form button:hover {
+.project-form form button:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
 
-.blog-list {
+.project-list {
   background-color: rgb(206, 206, 206);
   display: grid;
   grid-template-columns: auto auto auto;
@@ -171,7 +171,13 @@ select {
   padding: 5px 80px;
 }
 
-.blog-list-item {
+.header-project {
+  background-color: rgb(206, 206, 206);
+  justify-content: space-between;
+  padding: 5px 80px;
+}
+
+.project-list-item {
   width: 300px;
   text-align: justify;
   background-color: white;
@@ -182,18 +188,22 @@ select {
   margin: auto;
 }
 
-.blog-list-item .blog-content {
+.project-list-item .project-content {
   font-size: 15px;
 }
 
-.blog-list .btn-group {
+.project-list .btn-group {
   display: flex;
   text-align: right;
   margin: 10px auto;
   justify-content: space-between;
 }
 
-.blog-list .btn-group .btn-edit {
+.project-list .btn-group button:hover {
+  background-color: orangered;
+}
+
+.project-list .btn-group .btn-edit {
   flex: 50%;
   padding: 5px 10px;
   border: 0;
@@ -202,7 +212,7 @@ select {
   color: #ffffff;
 }
 
-.blog-list .btn-group .btn-post {
+.project-list .btn-group .btn-post {
   flex: 50%;
   margin-left: 5px;
   padding: 5px 10px;
@@ -212,7 +222,7 @@ select {
   color: #fff;
 }
 
-.blog-list-item .blog-image img {
+.project-list-item .project-image img {
   height: 50%;
   object-fit: cover;
 }
