@@ -62,7 +62,7 @@ nav ul li .active {
   margin-top: 20px;
 }
 
-.contact {
+.container .left .contact {
   width: 100px;
   background-color: black;
   color: white;
@@ -73,10 +73,11 @@ nav ul li .active {
   text-decoration: none;
 }
 
-.contact a:hover {
+.left div a :hover {
   background-color: orangered;
   color: white;
 }
+
 section {
   display: flex;
   background-color: white;

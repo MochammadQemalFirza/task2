@@ -137,23 +137,14 @@ function getDistance(time) {
   let distanceMinutes = Math.floor(distance / (milisecond * 60));
   let distanceSecond = Math.floor(distance / milisecond);
 
-  if (distanceSecond <= 60) {
+  if (distanceDay > 0) {
+    return `${distanceDay} days ago`;
+  } else if (distanceHours > 0) {
+    return `${distanceHours} hours ago`;
+  } else if (distanceMinutes > 0) {
+    return `${distanceMinutes} minutes ago`;
+  } else {
     return `${distanceSecond} seconds ago`;
-  } else if (distanceSecond > 60) {
-    return `${distanceMinutes} minutes ` + `${distanceSecond} seconds ago`;
-  } else if (distanceMinutes > 60) {
-    return (
-      `${distanceHours} hours ` +
-      `${distanceMinutes} minutes ` +
-      `${distanceSecond} seconds ago`
-    );
-  } else if (distanceHours > 24) {
-    return (
-      `${distanceDay} days ` +
-      `${distanceHours} hours ` +
-      `${distanceMinutes} minutes ` +
-      `${distanceSecond} seconds ago`
-    );
   }
 }
 
