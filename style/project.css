@@ -168,7 +168,7 @@ select {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: space-between;
-  padding: 5px 80px;
+  padding: 50px 80px;
 }
 
 .header-project {

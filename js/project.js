@@ -7,7 +7,6 @@ function submitProject(event) {
   let startDate = document.getElementById("input-start-date").value;
   let endDate = document.getElementById("input-end-date").value;
   let description = document.getElementById("input-description").value;
-  let input = document.querySelectorAll(".multi-input:checked");
   let image = document.getElementById("input-file").files;
   let images = document.getElementById("input-file").value;
 
@@ -17,8 +16,6 @@ function submitProject(event) {
     return alert("Start Date can't be empty!");
   } else if (endDate == "") {
     return alert("End Date can't be empty!");
-  } else if (input.length == 0) {
-    return alert("Please choose atleast one option");
   } else if (description == "") {
     return alert("Description can't be empty!");
   } else if (images == "") {
@@ -62,7 +59,7 @@ function submitProject(event) {
   let vueJs = document.getElementById("cek4").checked ? vueJsIcon : "";
 
   let multiInput = document.querySelectorAll(".multi-input:checked");
-  if (multiInput.length === 0) {
+  if (multiInput.length == 0) {
     return alert("Please Select At least One Technologies");
   }
   image = URL.createObjectURL(image[0]);
@@ -88,7 +85,7 @@ function renderProject() {
   document.getElementById("content").innerHTML = "";
   for (let i = 0; i < data.length; i++) {
     document.getElementById("content").innerHTML += `
-    <div class="project-list-item" style="margin 50px auto"> 
+    <div class="project-list-item" > 
      <div class="project-image">
        <img src="${
          data[i].image
