@@ -99,7 +99,7 @@ function renderProject() {
          data[i].projectTitle
        }</p></a>
        <p style="font-size: 20px;">Durasi: ${data[i].durasi}</p>
-       <p>sejak : ${getDistance(data[i].postAt)}</p>
+       <p>Post: ${getDistance(data[i].postAt)}</p>
      </div>
      <div>
                           ${data[i].nodeJs}
