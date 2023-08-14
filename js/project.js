@@ -1,4 +1,5 @@
 let data = [];
+let Datadummy = false;
 
 function submitProject(event) {
   event.preventDefault();
@@ -79,9 +80,13 @@ function submitProject(event) {
   data.push(project);
   console.log(data);
   renderProject();
+  Datadummy = true;
 }
 
 function renderProject() {
+  if (!Datadummy) {
+    return;
+  }
   document.getElementById("content").innerHTML = "";
   for (let i = 0; i < data.length; i++) {
     document.getElementById("content").innerHTML += `
@@ -92,23 +97,24 @@ function renderProject() {
        }" alt="gagal" style="width: 100%; border-radius: 10px 10px 0 0;" />
      </div>
      <div class="title-content">
-       <a href="project_detail.html"><p style="font-size: 25px;text-align: left ; margin: 0px;">${
+       <a href="project_detail.html"><p style="font-size: 25px;text-align: left ; margin: 0px;"><strong>${
          data[i].projectTitle
-       }</p></a>
-       <p style="font-size: 20px;">Durasi: ${data[i].durasi}</p>
-       <p>Post: ${getDistance(data[i].postAt)}</p>
+       }</strong></p></a>
+       <p >Durasi: ${data[i].durasi}</p>
+       <p style:"margin:0px">Post: ${getDistance(data[i].postAt)}</p>
      </div>
-     <div>
-                          ${data[i].nodeJs}
-                          ${data[i].golang}
-                          ${data[i].reactJs}
-                          ${data[i].vueJs}
-                        </div>
+   
      <div class="project-content">
          <p style="font-size:12px">
             ${data[i].description}
          </p>
      </div>
+     <div>
+     ${data[i].nodeJs}
+     ${data[i].golang}
+     ${data[i].reactJs}
+     ${data[i].vueJs}
+   </div>
      <div class="btn-group">
        <button class="btn-edit">Edit Post</button>
        <button class="btn-post">Delete Post</button>
