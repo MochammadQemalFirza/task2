@@ -97,11 +97,13 @@ function renderProject() {
        }" alt="gagal" style="width: 100%; border-radius: 10px 10px 0 0;" />
      </div>
      <div class="title-content">
-       <a href="project_detail.html"><p style="font-size: 25px;text-align: left ; margin: 0px;"><strong>${
+       <a href="project_detail.html"><p class ="title" style="font-size: 25px;text-align: left ; margin: 0px;"><strong>${
          data[i].projectTitle
        }</strong></p></a>
-       <p >Durasi: ${data[i].durasi}</p>
-       <p style:"margin:0px">Post: ${getDistance(data[i].postAt)}</p>
+       <p class : "duration">Durasi: ${data[i].durasi}</p>
+       <p class : "post"style:"margin:0px">Post: ${getDistance(
+         data[i].postAt
+       )}</p>
      </div>
    
      <div class="project-content">

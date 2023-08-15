@@ -81,9 +81,10 @@ nav ul li .active {
 
 section {
   display: flex;
+  flex-direction: row;
   background-color: white;
   width: 900px;
-  height: 450px;
+  margin: auto;
   padding: 50px;
   border-radius: 10px;
   box-shadow: 0 0 30px #666666;
@@ -107,4 +108,45 @@ section {
 
 .right p {
   font-size: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 90px 90px auto;
+    padding: 50px;
+  }
+  .left {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .right {
+    margin: 50px auto;
+    flex: 100%;
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 20px auto;
+    padding: 40px;
+  }
+  .left {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .right {
+    margin: 50px auto;
+    flex: 100%;
+    width: 100%;
+  }
 }

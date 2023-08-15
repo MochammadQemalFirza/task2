@@ -108,3 +108,33 @@ button:hover {
   background-color: rgb(255, 72, 0);
   color: rgb(255, 255, 255);
 }
+
+@media only screen and (max-width: 500px) {
+  section {
+    width: 90%;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  section {
+    width: 80%;
+    margin: 50px auto;
+    padding-bottom: 60px;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  select {
+    width: 100%;
+  }
+}
