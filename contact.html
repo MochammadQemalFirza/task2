@@ -1,6 +1,9 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style/contact.css" />
   <link rel="icon" type="image" href="assets/logo.png" />
   <title>Contact</title>
@@ -11,20 +14,30 @@
     <div class="nav-left">
       <ul>
         <li>
-          <img src="assets/logo.png" alt="logo" />
+          <img src=assets/logo.png alt="" />
         </li>
-        <li>
-          <a href="index.html" style="text-decoration:none;color: black;">Home</a>
+        <li class="item-collapse">
+          <a href="index.html" style="text-decoration: none;color: black;">Home</a>
         </li>
-        <li>
-          <a href="project.html" style="text-decoration:none;color: black;">My Project</a>
+        <li class="item-collapse">
+          <a href="project.html" style="text-decoration: none;color: black;">My Project</a>
         </li>
       </ul>
     </div>
-    <div class="nav-right">
-      <a href="contact.html">Contact</a>
+    <div class="nav-right item-collapse">
+      <a href="contact.html" style="text-decoration: none;">Contact</a>
+    </div>
+    <div class="nav-right" id="barsmenu">
+      <button style="background-color: transparent; border: none; cursor: pointer" onclick="openHamburger();">
+        <i class="fa-2x fa-solid fa-bars"></i>
+      </button>
     </div>
   </nav>
+  <div class="hamburger-nav-container" id="hamburger-nav-container">
+    <a href="index.html">Home</a>
+    <a href="project.html">My Project</a>
+    <a href="contact.html" class="hamburger-active">Contact</a>
+  </div>
   <section>
     <form>
       <center>
@@ -59,7 +72,7 @@
         <textarea name="" id="input-message" cols="30" rows="4" maxlength="50"></textarea>
       </div>
       <div style="text-align: end;">
-        <button type="button" onclick="submitData()">Submit</button>
+        <button class="button" type="button" onclick="submitData()">Submit</button>
       </div>
     </form>
   </section>

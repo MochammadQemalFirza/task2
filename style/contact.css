@@ -56,6 +56,46 @@ nav ul li .active {
   color: rgb(255, 255, 255);
 }
 
+#barsmenu {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger a {
+  color: #000;
+}
+
+.hamburger-nav-container {
+  font-size: 23px;
+  list-style-type: none;
+  display: none;
+}
+
+.hamburger-nav-container a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #9a9a9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+.hamburger-nav-container .hamburger-active {
+  text-decoration: none;
+  color: #fff;
+  background-color: orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
 section {
   width: 600px;
   background-color: #ffffff;
@@ -93,7 +133,7 @@ textarea {
   resize: none;
 }
 
-button {
+.button {
   background-color: rgb(0, 0, 0);
   color: white;
   padding: 10px 40px;
@@ -120,6 +160,18 @@ button:hover {
 
   select {
     width: 100%;
+  }
+
+  .nav-left .item-collapse {
+    display: none;
+  }
+
+  .item-collapse {
+    display: none;
+  }
+
+  #barsmenu {
+    display: block;
   }
 }
 
