@@ -169,10 +169,6 @@ select {
   cursor: pointer;
 }
 
-.project-form form .input-project-image-group label p {
-  font-size: 15px;
-}
-
 .project-form form .input-project-image-group label {
   width: 95%;
   padding: 10px;
@@ -182,6 +178,10 @@ select {
   justify-content: space-between;
   font-weight: 500;
 }
+
+/* .project-form form .input-project-image-group {
+  display: none;
+} */
 
 .project-form form .button-group {
   text-align: right;
